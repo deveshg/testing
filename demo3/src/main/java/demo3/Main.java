@@ -1,11 +1,7 @@
 package demo3;
 
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.List;
-
-import com.google.common.base.Function;
-import com.google.common.collect.Collections2;
 
 import demo1.Person;
 import demo1.dao.PersonDAO;
