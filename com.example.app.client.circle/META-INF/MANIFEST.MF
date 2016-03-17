@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Circle
+Bundle-SymbolicName: com.example.app.client.circle;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Bundle-Activator: com.example.app.client.circle.Activator
+Bundle-Vendor: EXAMPLE
+Require-Bundle: org.eclipse.ui,
+ org.eclipse.core.runtime,
+ com.example.app.api.circle;bundle-version="1.0.0",
+ com.example.app.demo1;bundle-version="1.0.0"
+Bundle-RequiredExecutionEnvironment: JavaSE-1.7
+Bundle-ActivationPolicy: lazy

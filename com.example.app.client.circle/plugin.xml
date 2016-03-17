@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.ui.commands">
+      <category
+            id="com.example.app.client.circle.commands.category"
+            name="Sample Category">
+      </category>
+      <command
+            categoryId="com.example.app.client.circle.commands.category"
+            id="com.example.app.client.circle.commands.sampleCommand"
+            name="Sample Command">
+      </command>
+   </extension>
+   <extension
+         point="org.eclipse.ui.handlers">
+      <handler
+            class="com.example.app.client.circle.handlers.SampleHandler"
+            commandId="com.example.app.client.circle.commands.sampleCommand">
+      </handler>
+   </extension>
+   <extension
+         point="org.eclipse.ui.bindings">
+      <key
+            commandId="com.example.app.client.circle.commands.sampleCommand"
+            contextId="org.eclipse.ui.contexts.window"
+            schemeId="org.eclipse.ui.defaultAcceleratorConfiguration"
+            sequence="M1+6">
+      </key>
+   </extension>
+   <extension
+         point="org.eclipse.ui.menus">
+      <menuContribution
+            locationURI="menu:org.eclipse.ui.main.menu?after=additions">
+         <menu
+               id="com.example.app.client.circle.menus.sampleMenu"
+               label="Sample Menu"
+               mnemonic="M">
+            <command
+                  commandId="com.example.app.client.circle.commands.sampleCommand"
+                  id="com.example.app.client.circle.menus.sampleCommand"
+                  mnemonic="S">
+            </command>
+         </menu>
+      </menuContribution>
+      <menuContribution
+            locationURI="toolbar:org.eclipse.ui.main.toolbar?after=additions">
+         <toolbar
+               id="com.example.app.client.circle.toolbars.sampleToolbar">
+            <command
+                  commandId="com.example.app.client.circle.commands.sampleCommand"
+                  icon="icons/sample.gif"
+                  id="com.example.app.client.circle.toolbars.sampleCommand"
+                  label="circle"
+                  tooltip="Circle Client">
+            </command>
+         </toolbar>
+      </menuContribution>
+   </extension>
+
+</plugin>
